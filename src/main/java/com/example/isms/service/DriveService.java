@@ -19,7 +19,7 @@ public class DriveService {
 
     private static Drive getDriveService() throws Exception {
         GoogleCredentials credentials = GoogleCredentials
-                .fromStream(new FileInputStream("src/main/resources/isms-file-store-6a965ee8bd7c.json"))
+                .fromStream(new FileInputStream("isms-file-store-6a965ee8bd7c.json"))
                 .createScoped(Collections.singleton(DriveScopes.DRIVE));
 
         return new Drive.Builder(new NetHttpTransport(),
